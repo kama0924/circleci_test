@@ -11,6 +11,7 @@ jobs:
             sudo apt-get install gbs
       - run: 
           name: git clone
+          command: |
             git clone https://review.tizen.org/gerrit/p/platform/core/account/account-manager -b tizen
       #- run: 
       #    name: gbs build
