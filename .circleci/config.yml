@@ -3,6 +3,7 @@ jobs:
   build:
     machine: true
     steps:
+      - checkout
       - run: 
           name: install gbs
           command: |
@@ -12,7 +13,7 @@ jobs:
       - run: 
           name: git clone
           command: |
-            git clone https://review.tizen.org/gerrit/p/platform/core/account/account-manager -b tizen
+            git clone http://review.tizen.org/gerrit/p/platform/core/account/account-manager -b tizen
       #- run: 
       #    name: gbs build
       #    command: |
