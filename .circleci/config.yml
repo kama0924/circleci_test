@@ -1,9 +1,15 @@
-version: 2.1
-
-orbs:
-    hello: circleci/hello-build@0.0.7 # uses the circleci/buildpack-deps Docker image
-
-workflows:
-    "Hello Workflow":
-        jobs:
-          - hello/hello-build
+version: 2
+jobs:
+  build:
+    machine: true
+    steps:
+      - run: 
+          name: install gbs
+          command: |
+            sudo sh -c "echo \"deb [trusted=yes] http://download.tizen.org/tools/latest-release/Ubuntu_16.04/ /\" >> /etc/apt/sources.list.d/tizen.list"
+            sudo apt-get update
+            sudo apt-get install gbs
+      #- run: 
+      #    name: gbs build
+      #    command: |
+      #      gbs -c .gbs.conf build -A armv7l --clean
