@@ -10,6 +10,7 @@ jobs:
             sudo sh -c "echo \"deb [trusted=yes] http://download.tizen.org/tools/latest-release/Ubuntu_14.04/ /\" >> /etc/apt/sources.list.d/tizen.list"
             sudo apt-get update
             sudo apt-get install gbs
+            sudo apt-get install openjdk-8-jdk
       - run: 
           name: gbs build
           command: |
