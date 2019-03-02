@@ -11,10 +11,6 @@ jobs:
             sudo apt-get update
             sudo apt-get install gbs
       - run: 
-          name: git clone
+          name: gbs build
           command: |
-            git clone http://review.tizen.org/gerrit/p/platform/core/account/account-manager -b tizen
-      #- run: 
-      #    name: gbs build
-      #    command: |
-      #      gbs -c .gbs.conf build -A armv7l --clean
+            gbs -c .gbs.conf build -A armv7l --clean
