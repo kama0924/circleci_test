@@ -16,3 +16,4 @@ jobs:
           command: |
             #gbs -c .gbs.conf build -A armv7l --clean
             java -version
+            cat /etc/issue
