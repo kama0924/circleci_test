@@ -1,0 +1,7 @@
+[Unit]
+Description=Account Service D-BUS
+
+[D-BUS Service]
+Name=org.tizen.account.manager
+Exec=/bin/false
+SystemdService=accounts-service.service

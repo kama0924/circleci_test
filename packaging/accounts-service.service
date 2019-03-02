@@ -1,0 +1,17 @@
+[Unit]
+Description=Accounts service
+After=dbus.socket
+Requires=dbus.socket
+
+[Service]
+Type=dbus
+BusName=org.tizen.account.manager
+ExecStart=/usr/bin/account-svcd
+CapabilityBoundingSet=~CAP_MAC_ADMIN
+CapabilityBoundingSet=~CAP_MAC_OVERRIDE
+User=service_fw
+Group=service_fw
+SmackProcessLabel=System
+
+[Install]
+WantedBy=multi-user.target
